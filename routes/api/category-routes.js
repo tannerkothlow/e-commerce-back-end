@@ -22,7 +22,7 @@ router.get('/:id', async (req, res) => {
       include: [{model: Product}],
     });
     if (!categoryData) {
-      res.status(400).json({ message: 'No category found by that ID!' });
+      res.status(404).json({ message: `No category found with ID of ${req.params.id}`});
       return;
     }
   } catch (err) {
@@ -51,7 +51,7 @@ router.put('/:id', async (req, res) => {
   // update a category by its `id` value
 
   // same req.body as post
-  
+
   try {
     const updateCategory = await Category.update(req.body, {
       where: {
@@ -60,7 +60,7 @@ router.put('/:id', async (req, res) => {
       individualHooks: true
     });
     if (!updateCategory[0]) {
-      res.status(404).json({ message: 'No category found with this ID!'});
+      res.status(404).json({ message: `No category found with ID of ${req.params.id}`});
       return;
     }
     res.status(200).json(updateCategory);
@@ -72,7 +72,16 @@ router.put('/:id', async (req, res) => {
 router.delete('/:id', async (req, res) => {
   // delete a category by its `id` value
   try {
-
+    const deleteCategory = await Category.destroy({
+      where: {
+        id: req.params.id,
+      },
+    });
+    if (!deleteCategory) {
+      res.status(404).json({ message: `No category found with ID of ${req.params.id}`});
+      return;
+    }
+    res.status(200).json(deleteCategory);
   } catch (err) {
     res.status(500).json(err);
   }
