@@ -2,7 +2,13 @@
 
 ## Description
 
+For our 13th week in our coding bootcamp, we were to build off of starter code using sequelize to create the back end for a demonstration e-commerce database. Our task was specifically to form the models and API routes for the applicaiton.
 
+Having learned a lesson from our Week 11 assignment, I made sure to focus on just the files that needed to be added to. In this assignment our task is only relative to the models and routes folder. Too often with these starter code assignments it's easy to become overwhelmed at having a whole application presented to you. 
+
+First order of business was to assemble the models that will be used to seed our database. Looking over the Sequelize docs and referencing classwork code, it wasn't long before all the models were properly made. After some testing and rooting out a typo that duplicated a particular column, the database was ready to be seeded.
+
+Next were the routes. This turned out to be relatively simple once familiarized with the syntax. Compared to the previous assignment which used clunky mysql.createConnection syntax to make database calls, Sequelize definitely increases what can be done per line of code. It's similar to how we used basic Javascript to interact with the DOM for a few assignments so we could appreciate how much more efficient jQuery was.
 
 ## Installation
 
