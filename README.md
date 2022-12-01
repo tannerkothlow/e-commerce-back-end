@@ -2,7 +2,7 @@
 
 ## Description
 
-For our 13th week in our coding bootcamp, we were to build off of starter code using sequelize to create the back end for a demonstration e-commerce database. Our task was specifically to form the models and API routes for the applicaiton.
+For our 13th week in our coding bootcamp, we were to build off of starter code using Sequelize to create the back end for a demonstration e-commerce database. Our task was specifically to form the models and API routes for the application.
 
 Having learned a lesson from our Week 11 assignment, I made sure to focus on just the files that needed to be added to. In this assignment our task is only relative to the models and routes folder. Too often with these starter code assignments it's easy to become overwhelmed at having a whole application presented to you. 
 
@@ -12,7 +12,7 @@ Next were the routes. This turned out to be relatively simple once familiarized 
 
 ## Installation
 
-Once you have cloned the repo to your machine, run **npm i** to instal all the necessary dependencies.
+Once you have cloned the repo to your machine, run **npm i** to install all the necessary dependencies.
 
 Then to initialize the database, open **./db** in an integrated terminal and login to mysql using **mysql -u root -p** or an appropriate equivalent. Then **source schema.sql;** to create the ecommerce_db database. **Any preexisting database named ecommerce_db will be dropped.**
 
@@ -26,7 +26,7 @@ To seed the database, run **node seeds/index.js** in the root folder.
 
 ![requests](./project/images/requests.PNG)
 
-- All GET requests will follow a similar structure and produce JSON objects appropriate to their route. Category requests will show the products in that category, product requests will show all tags associated with that product, and tag reuqests will show all associated products.
+- All GET requests will follow a similar structure and produce JSON objects appropriate to their route. Category requests will show the products in that category, product requests will show all tags associated with that product, and tag requests will show all associated products.
 
 - Requests made at a URL with no params will return all objects in that route. For example, **./api/categories/** will return all categories.
 
@@ -36,7 +36,7 @@ To seed the database, run **node seeds/index.js** in the root folder.
 
 ![get one](./project/images/get_one.PNG)
 
-- To create a new category, product, or tag, submit a post requqest formatted like the examples below.
+- To create a new category, product, or tag, submit a post request formatted like the examples below.
 
 - New category:
 
@@ -53,6 +53,8 @@ To seed the database, run **node seeds/index.js** in the root folder.
 - To update a category, product, or tag: format the URL like a GET ONE request and format the request itself like a POST request.
 
 ![updates](./project/images/update.PNG)
+
+- You can also watch a breif guide on how to make these requests [here](https://drive.google.com/file/d/1OpucAU6iPj5k0oSm1xZqQdy3gFbLdgP_/view?usp=sharing)
 
 ## License
 
